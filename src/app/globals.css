@@ -1,0 +1,116 @@
+@import "tailwindcss";
+
+/* ===== ZRSchedule UI helpers (Blue panels + readable text) ===== */
+:root {
+  --zr-blue: #d9efff;         /* light blue panel */
+  --zr-blue-border: #7cc4ff;  /* border */
+  --zr-black: #07090c;
+}
+
+.zr-bg-dark {
+  background: radial-gradient(1200px 600px at 20% 0%, rgba(120, 170, 255, 0.18), transparent 55%),
+              radial-gradient(900px 500px at 85% 10%, rgba(160, 120, 255, 0.14), transparent 55%),
+              linear-gradient(to bottom, #07080a, #050608 40%, #06070a);
+  min-height: 100vh;
+}
+
+/* Blue areas you marked in green */
+.zr-blue-panel {
+  background: var(--zr-blue);
+  border: 1px solid rgba(124, 196, 255, 0.75);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.45);
+  border-radius: 18px;
+}
+
+/* Make ALL text inside blue panels BLACK (buttons keep their own colors) */
+.zr-blue-panel,
+.zr-blue-panel *:not(button):not(a):not(svg):not(path) {
+  color: var(--zr-black) !important;
+}
+
+/* Inputs inside blue panels */
+.zr-blue-panel input,
+.zr-blue-panel select,
+.zr-blue-panel textarea {
+  background: rgba(255, 255, 255, 0.92) !important;
+  border: 1px solid rgba(0, 0, 0, 0.18) !important;
+  color: var(--zr-black) !important;
+  border-radius: 14px;
+}
+
+.zr-blue-panel input::placeholder,
+.zr-blue-panel textarea::placeholder {
+  color: rgba(7, 9, 12, 0.55) !important;
+}
+
+/* Chips (small pills) */
+.zr-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(0,0,0,0.18);
+  background: rgba(255,255,255,0.75);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--zr-black);
+}
+
+.zr-status-done {
+  border-color: rgba(0, 135, 85, 0.30);
+  background: rgba(16, 185, 129, 0.14); /* green */
+  color: #064e3b;
+}
+
+.zr-status-active {
+  border-color: rgba(217, 119, 6, 0.30);
+  background: rgba(245, 158, 11, 0.16); /* orange/yellow */
+  color: #7c2d12;
+}
+
+.zr-status-planned {
+  border-color: rgba(29, 78, 216, 0.32);
+  background: rgba(37, 99, 235, 0.14); /* dark blue-ish */
+  color: #0b2a6f;
+}
+
+/* Buttons */
+.zr-btn {
+  border-radius: 14px;
+  padding: 10px 14px;
+  font-weight: 800;
+  border: 1px solid rgba(0,0,0,0.18);
+  background: rgba(255,255,255,0.75);
+  color: #0b0d12;
+}
+
+.zr-btn:hover { filter: brightness(0.98); }
+
+.zr-btn-open {
+  background: rgba(255,255,255,0.9);
+}
+
+.zr-btn-start {
+  background: #0f3d2e;   /* DARK GREEN */
+  border-color: rgba(0,0,0,0.20);
+  color: #ffffff;
+}
+
+.zr-btn-finish {
+  background: #14b8a6;   /* teal/green visible */
+  border-color: rgba(0,0,0,0.12);
+  color: #042f2e;
+}
+
+.zr-btn-delete {
+  background: #b91c1c;   /* STRONG RED */
+  border-color: rgba(0,0,0,0.20);
+  color: #ffffff;
+}
+
+/* Small helper text */
+.zr-muted {
+  color: rgba(7, 9, 12, 0.55) !important;
+  font-size: 12px;
+}
