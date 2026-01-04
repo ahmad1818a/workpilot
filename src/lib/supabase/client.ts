@@ -7,9 +7,5 @@ export function createClient() {
   );
 }
 
-/**
- * 🔒 Alias للحماية من أي import قديم في build cache
- * لا تحذفه حتى بعد نجاح deploy
- */
+// ✅ IMPORTANT: alias for older code / builds that still import it
 export const createBrowserSupabaseClient = createClient;
-// trigger deploy
