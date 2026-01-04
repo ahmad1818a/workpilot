@@ -7,5 +7,4 @@ export function createClient() {
   );
 }
 
-// ✅ هذا السطر هو المفتاح
 export const createBrowserSupabaseClient = createClient;
