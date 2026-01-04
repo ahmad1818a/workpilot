@@ -7,5 +7,7 @@ export function createClient() {
   );
 }
 
-// ✅ alias لتوافق أي كود قديم
-export const createBrowserSupabaseClient = createClient;
+// ✅ alias to support older imports (fix vercel build)
+export function createBrowserSupabaseClient() {
+  return createClient();
+}
