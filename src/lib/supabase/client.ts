@@ -7,5 +7,5 @@ export function createClient() {
   );
 }
 
-// 👇 هذا السطر هو الحل
+// ✅ Alias (يحل المشكلة لو أي ملف يستدعي الاسم القديم)
 export const createBrowserSupabaseClient = createClient;
