@@ -7,5 +7,5 @@ export function createClient() {
   );
 }
 
-// ✅ IMPORTANT: alias for older code / builds that still import it
+// ✅ هذا السطر هو المفتاح
 export const createBrowserSupabaseClient = createClient;
