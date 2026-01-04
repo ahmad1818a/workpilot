@@ -7,7 +7,8 @@ export function createClient() {
   );
 }
 
-// ✅ alias to support older imports (fix vercel build)
-export function createBrowserSupabaseClient() {
-  return createClient();
-}
+/**
+ * 🔒 Alias للحماية من أي import قديم في build cache
+ * لا تحذفه حتى بعد نجاح deploy
+ */
+export const createBrowserSupabaseClient = createClient;
