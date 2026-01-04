@@ -7,5 +7,5 @@ export function createClient() {
   );
 }
 
-// ✅ alias for old imports used in some pages
+// ✅ alias لتوافق أي كود قديم
 export const createBrowserSupabaseClient = createClient;
