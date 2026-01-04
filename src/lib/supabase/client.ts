@@ -7,5 +7,5 @@ export function createClient() {
   );
 }
 
-// ✅ هذا السطر هو اللي يحل المشكلة (يعمل export بالاسم المطلوب)
+// 👇 هذا السطر هو الحل
 export const createBrowserSupabaseClient = createClient;
