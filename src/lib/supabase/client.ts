@@ -12,3 +12,4 @@ export function createClient() {
  * لا تحذفه حتى بعد نجاح deploy
  */
 export const createBrowserSupabaseClient = createClient;
+// trigger deploy
